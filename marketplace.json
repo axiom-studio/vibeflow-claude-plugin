@@ -1,0 +1,29 @@
+{
+  "name": "axiom-vibeflow",
+  "owner": {
+    "name": "Axiom Studio AI"
+  },
+  "metadata": {
+    "description": "VibeFlow session bootstrap for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "vibeflow",
+      "source": "./",
+      "description": "Connects Claude Code to the VibeFlow MCP server and provides session initialization",
+      "version": "1.0.0",
+      "author": {
+        "name": "Axiom Studio AI"
+      },
+      "homepage": "https://cloud.axiomstudio.ai",
+      "repository": "https://github.com/axiom-studio/vibeflow-plugin",
+      "license": "Apache-2.0",
+      "keywords": [
+        "vibeflow",
+        "session-init",
+        "mcp"
+      ]
+    }
+  ]
+}

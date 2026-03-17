@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vibeflow": {
+      "type": "http",
+      "url": "${VIBEFLOW_SERVER_URL:-https://cloud.axiomstudio.ai}/rest/v1/mcp-gateway/mcp",
+      "headers": {
+        "Authorization": "Bearer ${VIBEFLOW_API_TOKEN}"
+      }
+    }
+  }
+}
