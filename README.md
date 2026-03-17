@@ -46,15 +46,45 @@ Add to `.claude/settings.json` or `~/.claude/settings.json` to auto-allow MCP to
 }
 ```
 
-## Usage
+## Skills
 
-```
-/vibeflow:init my-project                    # Start as developer (default)
-/vibeflow:init my-project architect          # Start as architect
-/vibeflow:init my-project product-manager    # Start as product manager
+### Project Lifecycle
+
+| Command | Description |
+|---------|-------------|
+| `/vibeflow:setup` | Verify token and MCP server connection |
+| `/vibeflow:onboard my-project` | First-time setup — scan codebase, create project, build contexts |
+| `/vibeflow:scan my-project` | Re-scan codebase and refresh existing contexts |
+
+### Session Management
+
+| Command | Description |
+|---------|-------------|
+| `/vibeflow:init my-project [persona]` | Start an agent session (default: developer) |
+| `/vibeflow:resume [persona]` | Resume a previous session from session file |
+| `/vibeflow:status [project-name]` | Show session status and active work items |
+| `/vibeflow:stop [persona]` | Graceful shutdown with context save |
+
+### Visibility
+
+| Command | Description |
+|---------|-------------|
+| `/vibeflow:log [project-name]` | Show recent agent activity and execution logs |
+| `/vibeflow:handoff [project-name]` | Create a handoff summary for the next persona or human |
+
+### Typical Workflow
+
+```bash
+/vibeflow:setup                              # First time: verify auth
+/vibeflow:onboard my-project                 # First time: scan codebase → create project
+/vibeflow:init my-project                    # Start working as developer
+/vibeflow:init my-project architect          # Or as architect
+/vibeflow:status                             # Check progress
+/vibeflow:handoff                            # Summarize state for handoff
+/vibeflow:stop                               # Done for the day
 ```
 
-The server returns full agent instructions — the plugin just kicks off the session.
+All agent behavior, rules, and personas are delivered by the server — the plugin provides entry points.
 
 ### Available Personas
 
