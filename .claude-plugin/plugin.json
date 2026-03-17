@@ -7,7 +7,7 @@
     "url": "https://cloud.axiomstudio.ai"
   },
   "homepage": "https://cloud.axiomstudio.ai",
-  "repository": "https://github.com/axiom-studio/vibeflow-plugin",
+  "repository": "https://github.com/axiom-studio/vibeflow-claude-plugin",
   "license": "Apache-2.0",
   "keywords": [
     "vibeflow",
